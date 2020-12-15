@@ -14,16 +14,16 @@
 
 To make task on the list as priority put value priority 1 and a heart appears in the front of task showing that it is priority task.
 
-
+![](views/todolist.png)
 
 ## To make different list
 
 To make different list add "/name-of-list" at the end of the url.
 
+![](views/todolist2.png)
 
 
-
-*Click the below icon to visit my GitHub & LinkedIn profile.*
+## Click the below icon to visit my GitHub & LinkedIn profile.
 
 [1]: https://www.github.com/Pragya0810
 [2]: https://www.linkedin.com/in/pragya-chhajer-5a5aa6159/
