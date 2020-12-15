@@ -8,13 +8,22 @@
     "lodash": "^4.17.19",
     "mongoose": "^5.9.23"
     
-**Used MongoDb for database and NodeJs to run app on local server as well as deployed on heroku link in descrption**
+## Techstack Used
+    Frontend:  HTML, CSS, EJS Templating
+    Backend:  NodeJs 
+    Database:  MongoDB
+    Hosted:  Local server Port 3000 and on Heroku app Deployment
 
 ## Priortising the task
 
-To make task on the list as priority put value priority 1 and a heart appears in the front of task showing that it is priority task.
+To add the enter the task. When task is completed you can delete the task by clicking on the checkbox on the left of the task.To make task on the list as priority put value priority 1 and a heart appears in the right of task showing that it is priority task.
 
 ![](views/todolist.png)
+
+## Searching the task
+
+![](views/todolist3.png)
+
 
 ## To make different list
 
