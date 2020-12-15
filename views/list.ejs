@@ -1,0 +1,59 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1> <%= listTitle %> </h1>
+    <input id="searchbar" onkeyup="search_list()" type="text" name="search" placeholder="Search List"> 
+
+  </div>
+
+  <div class="box">
+    <% for (let i=0; i<newListItems.length ; i++) { %>
+      <% if( newListItems[i].priority === "1" ){ %>
+      <form class="" action="/delete" method="post">
+      <div class="item">
+          <input type="checkbox"  value="<%= newListItems[i]._id %>" onchange="this.form.submit()" name="checkbox">
+          <p class="abcd"><%=  newListItems[i].name  %></p>
+          <p>❤</p>
+      </div>
+      <input type="hidden" name="listName" value="<%=listTitle  %>"></input>
+    </form>
+    <% } %> 
+      <% } %>
+      <% for (let i=0; i<newListItems.length ; i++) { %>
+        <% if( newListItems[i].priority === "0" ){ %>
+        <form class="" action="/delete" method="post">
+        <div class="item">
+            <input type="checkbox" value="<%= newListItems[i]._id %>" onchange="this.form.submit()" name="checkbox">
+            <p class="abcd"><%=  newListItems[i].name  %></p>   
+        </div>
+        <input type="hidden" name="listName" value="<%=listTitle  %>"></input>
+      </form>
+      <% } %> 
+    <% } %>
+
+      <form class="" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <input type="text" name="newItemPriority" placeholder="Priority 0/1" autocomplete="off">
+        <button type="submit" name="list" value="<%=listTitle  %>">+</button>
+      </form>
+  </div>
+
+  <script>
+    function search_list() 
+    { 
+      let input = document.getElementById('searchbar').value 
+      input=input.toLowerCase(); 
+      let x = document.getElementsByClassName('abcd'); 
+        
+      for (i = 0; i < x.length; i++) {  
+          if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+              x[i].style.display="none"; 
+          } 
+          else { 
+              x[i].style.display="list-item";                  
+          } 
+      } 
+    }
+  </script>
+
+<%- include("footer") -%>
